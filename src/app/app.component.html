@@ -1,3 +1,11 @@
 <h1>
   {{title}}
 </h1>
+<input [(ngModel)]='val' (change)='addressValue(val)'/>
+<router-outlet></router-outlet>
+<!--<child-component></child-component>-->
+<ul>
+    <li *ngFor="let detail of details">{{detail.types[0]}} - {{detail.long_name | uppercase }}</li>
+      <!-- <li>{{latLong.location.lat}} - {{latLong.location.lng}}</li>   -->
+</ul>
+<button (click)='logFunc()'>Hit me</button>
